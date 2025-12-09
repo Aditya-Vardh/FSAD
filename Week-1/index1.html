@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Week 1 — Basic HTML</title>
+    <meta name="description" content="Simple starter HTML file for Week 1" />
+    <style>
+        /* Minimal styles for readability */
+        body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 1.5rem; }
+        header, main, footer { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 1.5rem; }
+        nav a { margin-right: 0.75rem; color: #0366d6; text-decoration: none; }
+        footer { margin-top: 2rem; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Basic HTML Boilerplate</h1>
+        <nav>
+            <a href="#intro">Intro</a>
+            <a href="#examples">Examples</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>This is a minimal HTML starter file you can use for exercises in Week 1.</p>
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+
+            <h3>List</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Image</h3>
+            <p>
+                <img src="https://via.placeholder.com/400x150?text=Placeholder" alt="Placeholder image" />
+            </p>
+
+            <h3>Form</h3>
+            <form action="#" method="get">
+                <label>
+                    Name:
+                    <input type="text" name="name" placeholder="Your name" />
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Link to external resource: <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for Week 1 — Basic HTML example.</p>
+    </footer>
+
+    <script>
+        // Small script to demonstrate interaction
+        document.querySelector('form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = (this.elements['name']?.value || '').trim();
+            alert(name ? 'Hello, ' + name + '!' : 'Please enter your name.');
+        });
+    </script>
+</body>
+</html>
