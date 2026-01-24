@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.example.model.Student">
+        <constructor-arg value="101"/>
+        <constructor-arg value="ABCD"/>
+        <constructor-arg value="Java"/>
+        <constructor-arg value="2024"/>
+        <property name="course" value="Spring Framework"/>
+        <property name="year" value="2025"/>
+    </bean>
+
+</beans>
