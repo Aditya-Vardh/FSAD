@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 public class AuthController {
     @Autowired
     private UserRepository repo;
@@ -11,7 +12,7 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
 
-    @PostMapping("/login")
+    @PostMapping({"/login", "/api/login"})
     public String login(@RequestBody User user) {
         User dbUser = repo.findByUsername(user.getUsername())
             .orElseThrow(() -> new RuntimeException("User not found"));
